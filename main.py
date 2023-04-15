@@ -6,7 +6,7 @@ import os
 df = pd.read_excel("selected_cols.xlsx")
 
 # Save the table as an HTML file
-with open("./gh-pages/table.html", "w") as f:
+with open("table.html", "w") as f:
     f.write(df.to_html(index=False))
 
 def git_commit_push():
