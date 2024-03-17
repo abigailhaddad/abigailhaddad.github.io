@@ -33,9 +33,6 @@
   </div>
   
   <div class="right-column">
-    <h1>👋 Hi, I'm Abigail Haddad</h1>
-    <p>I'm a data scientist.</p>
-    
     <h2>Talks and Slides</h2>
     <ul>
       <li>📝 If you're here from the RGOV conference, here are <a href="https://github.com/abigailhaddad/conference_talk_slides">my slides from the talk and my notes</a> and here is <a href="https://github.com/abigailhaddad/usajobs_classification_with_marvin">the code for that project</a></li>
