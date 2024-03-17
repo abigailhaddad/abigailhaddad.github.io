@@ -1,8 +1,8 @@
 ## Contact
 
-- Email: [abigail.haddad@gmail.com](mailto:abigail.haddad@gmail.com)
-- LinkedIn: [https://www.linkedin.com/in/abigail-haddad/](https://www.linkedin.com/in/abigail-haddad/)
-- Substack: [https://presentofcoding.substack.com/](https://presentofcoding.substack.com/)
+- [Email](mailto:abigail.haddad@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/abigail-haddad/)
+- [Substack](https://presentofcoding.substack.com/)
 
 ## Talks and Slides
 
