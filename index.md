@@ -4,6 +4,19 @@
 - [LinkedIn](https://www.linkedin.com/in/abigail-haddad/)
 - [Substack](https://presentofcoding.substack.com/)
 
+## Bio
+
+Hi, I'm Abigail Haddad. I'm a data scientist working on LLM evals. I previously worked on research and data science for the Department of Defense, including at the RAND Corporation and as a Department of the Army civilian.
+
+My areas of interest include:
+
+- Methods for evaluating/classification of text data, including via LLMs
+- Government data workforce/talent management issues
+- Code-first data science and processes for better transparency and replication
+- DC school data
+
+Get in touch if you're interested in getting involved with/sponsoring Data Community DC or having me speak at your event.
+
 ## Upcoming Talks
 
 - "Automating Tests for your RAG Chatbot or Other Generative Tool" - New York R Conference, May 16-17
