@@ -16,11 +16,14 @@
   width: 100%;
   max-width: 200px;
   border-radius: 50%;
+  margin-top: 20px;
 }
 </style>
 
 <div class="container">
   <div class="left-column">
+    <!-- Existing column content will be inserted here -->
+    
     <img src="image.png" alt="Profile Picture" class="profile-picture">
     
     <h2>Contact</h2>
