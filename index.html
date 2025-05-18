@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abigail Haddad - ML Engineer & Data Scientist</title>
+    <style>
+        :root {
+            --primary-color: #2a6592;
+            --secondary-color: #f8f9fa;
+            --accent-color: #e63946;
+            --text-color: #333;
+            --light-text: #6c757d;
+            --border-color: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            color: var(--text-color);
+        }
+        
+        .headline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-bar {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        
+        .contact-link:hover {
+            opacity: 0.8;
+        }
+        
+        .contact-link svg {
+            margin-right: 8px;
+        }
+        
+        main {
+            padding: 50px 0;
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .talk {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .talk:last-child {
+            border-bottom: none;
+        }
+        
+        .talk-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .talk-links {
+            margin-top: 10px;
+        }
+        
+        .talk-links a {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        
+        .article {
+            margin-bottom: 25px;
+        }
+        
+        .article-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .article-links {
+            margin-top: 5px;
+        }
+
+        .see-more {
+            margin-top: 30px;
+            font-weight: 500;
+        }
+        
+        /* New styles for enhanced narrative */
+        .intro-statement {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .timeline {
+            margin-top: 20px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 35px;
+            position: relative;
+        }
+        
+        .timeline-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+        
+        /* Projects section styling */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
+        }
+        
+        .project-card {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .project-description {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .headline {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Abigail Haddad</h1>
+            <p class="headline">ML Engineer & Data Scientist</p>
+            <div class="contact-bar">
+                <a href="mailto:abigail.haddad@gmail.com" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Email
+                </a>
+                <a href="https://www.linkedin.com/in/abigail-haddad/" target="_blank" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/abigailhaddad" target="_blank" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://presentofcoding.substack.com/" target="_blank" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                    Substack
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            
+            <p>I'm an ML Engineer and Data Scientist working on modular tools for unstructured text data pipelines - focused on asking consistent questions of document sets, then evaluating and displaying the results.</p>
+            
+            <p>My background is in data science and Python. I earned a Public Policy PhD from RAND, worked as a data scientist for the Department of the Army, and until recently was part of the DHS AI Corps.</p>
+            
+            <p>My areas of interest include:</p>
+            <ul>
+                <li>Methods for evaluating and classification of text data, including via LLMs</li>
+                <li>Government data workforce and talent management issues</li>
+                <li>Code-first data science and processes for better transparency and replication</li>
+                <li>DC school data</li>
+            </ul>
+            
+            <p>Get in touch if you're interested in getting involved with/sponsoring Data Community DC or having me speak at your event.</p>
+        </section>
+
+        <section id="selected-talks">
+            <h2>Selected Talks</h2>
+            
+            <div class="talk">
+                <div class="talk-title">"Automating Tests for your RAG Chatbot or Other Generative Tool" - New York R Conference</div>
+                <div class="talk-links">
+                    <a href="https://www.youtube.com/watch?v=tc2wwPoEFKc" target="_blank">Video</a>
+                </div>
+            </div>
+            
+            <div class="talk">
+                <div class="talk-title">A Framework for Testing LLMs for Outputting Hazardous Information - Generative AI DC</div>
+                <div class="talk-links">
+                    <a href="https://www.youtube.com/watch?v=JfHDXICVBNg" target="_blank">Video</a>
+                </div>
+            </div>
+            
+            <div class="talk">
+                <div class="talk-title">Automated Evaluations for Your RAG Chatbot or Other Generative Tool - AI In Production</div>
+                <div class="talk-links">
+                    <a href="https://home.mlops.community/home/videos/automated-evaluations-for-your-rag-chatbot-or-other-generative-tool" target="_blank">Video</a>
+                </div>
+            </div>
+            
+            <div class="talk">
+                <div class="talk-title">What Job Is This, Anyway?: Using LLMs to Classify USAJobs Data Scientist Listings - RGOV Conference 2023</div>
+                <div class="talk-links">
+                    <a href="https://www.youtube.com/watch?v=Wu4vtPMBKLM" target="_blank">Video</a>
+                    <a href="https://github.com/abigailhaddad/conference_talk_slides" target="_blank">Slides and Notes</a>
+                    <a href="https://github.com/abigailhaddad/usajobs_classification_with_marvin" target="_blank">Code</a>
+                </div>
+            </div>
+            
+            <div class="talk">
+                <div class="talk-title">GitHub: How To Tell Your Professional Story - posit::conf(2024)</div>
+                <div class="talk-links">
+                    <a href="https://www.youtube.com/watch?v=R-bPjavai5A" target="_blank">Video</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="writing">
+            <h2>Selected Writing</h2>
+            
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://presentofcoding.substack.com/p/what-to-ask-your-engineers" target="_blank">
+                        What To Ask Your Engineers: Evaluating AI for Less-Technical Stakeholders
+                    </a>
+                </div>
+                <p>Guide for non-technical stakeholders on how to evaluate AI solutions and what questions to ask.</p>
+            </div>
+            
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://presentofcoding.substack.com/p/your-coders-use-llms" target="_blank">
+                        Your Coders Use LLMs: How Should Your Organization Adapt?
+                    </a>
+                </div>
+                <p>Strategies for organizations to effectively adapt to the widespread use of LLMs in coding workflows.</p>
+            </div>
+            
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://presentofcoding.substack.com/p/automating-llm-evaluation" target="_blank">
+                        Automating LLM Evaluation: A Guide for RAG Chatbots and Other Very Specific Generative Tools
+                    </a>
+                </div>
+                <p>Comprehensive approach to evaluating and testing LLM-based tools and chatbots.</p>
+            </div>
+            
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://presentofcoding.substack.com/p/when-models-give-different-answers" target="_blank">
+                        When Models Give Different Answers To The Same Question: Incorporating Non-Deterministic Tools Into Deterministic Processes
+                    </a>
+                </div>
+                <p>Exploring strategies for handling non-deterministic AI outputs in production systems.</p>
+            </div>
+            
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://presentofcoding.substack.com/p/can-mistral-large-do-that-using-an" target="_blank">
+                        Can Mistral Large Do That? Using an LLM Grader to Quickly Evaluate New Models
+                    </a>
+                </div>
+                <p>Techniques for rapidly assessing new LLM capabilities using other models as graders.</p>
+            </div>
+            
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://presentofcoding.substack.com/p/mapping-testing-to-threats" target="_blank">
+                        Mapping Testing to Threats: For Pre-release Testing, the Threat Model Should Inform the Methods
+                    </a>
+                </div>
+                <p>Approach to testing AI systems based on their specific threat models.</p>
+            </div>
+            
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://presentofcoding.substack.com/p/github-how-to-tell-your-professional" target="_blank">
+                        GitHub: How To Tell Your Professional Story
+                    </a>
+                </div>
+                <p>Strategies for effectively using GitHub to showcase your skills and experience.</p>
+            </div>
+            
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://presentofcoding.substack.com/p/improving-your-junior-data-analysisdata-science" target="_blank">
+                        Improving Your Junior Data Scientist Resume
+                    </a>
+                </div>
+                <p>Practical advice for early-career data scientists on optimizing their resumes.</p>
+            </div>
+            
+            <p class="see-more">
+                <a href="https://presentofcoding.substack.com/" target="_blank">See all articles on my Substack →</a>
+            </p>
+        </section>
+        
+        <section id="projects">
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Abigail Haddad</p>
+        </div>
+    </footer>
+</body>
+</html>
