@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "title": "How to Find a Side Project",
+      "subtitle": "",
+      "date": "June 24",
+      "url": "https://presentofcoding.substack.com/p/how-to-find-a-side-project",
+      "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/a5a489fc-d9c5-4596-9ffc-29a01973751a_1828x1080.jpeg",
+      "category": "Article"
+    },
+    {
+      "title": "My Blog Post Is the Exploit",
+      "subtitle": "Each new model changes the math",
+      "date": "June 17",
+      "url": "https://presentofcoding.substack.com/p/my-blog-post-is-the-exploit",
+      "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/46fb2bf7-4b6b-4bf5-95b1-367f564bebc0_1122x1402.png",
+      "category": "Article"
+    },
+    {
+      "title": "Your AI Lead Should Be an Engineer",
+      "subtitle": "'AI' is not a job description",
+      "date": "June 11",
+      "url": "https://presentofcoding.substack.com/p/your-ai-lead-should-be-an-engineer",
+      "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/68481eb4-a487-4cd8-8731-3616271606db_1537x1023.png",
+      "category": "AI/ML"
+    },
+    {
+      "title": "No, I Don\u2019t Read My Code",
+      "subtitle": "And I\u2019m Happy to Tell You Why",
+      "date": "June 8",
+      "url": "https://presentofcoding.substack.com/p/no-i-dont-read-my-code",
+      "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/bdaf8e4d-3976-4fe5-8bbb-4926df0d8b63_1594x987.png",
+      "category": "Article"
+    },
+    {
+      "title": "A Year After Leaving Government",
+      "subtitle": "Having an LLC instead of an employer",
+      "date": "May 25",
+      "url": "https://presentofcoding.substack.com/p/a-year-after-leaving-government",
+      "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/fcc29aa6-8a23-4039-8e2b-418d86293007_1630x1126.jpeg",
+      "category": "Government Tech"
+    },
+    {
+      "title": "Should You Go Work for the Federal Government?",
+      "subtitle": "Not a pitch and not a warning",
+      "date": "February 23",
+      "url": "https://presentofcoding.substack.com/p/should-you-go-work-for-the-federal",
+      "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/184f467b-d3e6-469d-9000-3b4d7b8e3ec0_1536x1024.png",
+      "category": "Government Tech"
+    }
+  ],
+  "last_updated": "2026-06-25T16:27:07.401517",
+  "source": "https://presentofcoding.substack.com"
+}
