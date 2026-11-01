@@ -5,6 +5,7 @@ Run locally after publishing a new post:
     python3 fetch_substack_posts.py && git add posts.json && git commit -m "Update posts" && git push
 """
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime
@@ -31,12 +32,25 @@ def categorize_post(title):
 
 
 def fetch_json():
-    """Fetch JSON from Substack API using curl"""
-    result = subprocess.run(
-        ["curl", "-s", "-f", "--compressed", API_URL],
-        capture_output=True, text=True, timeout=30
-    )
+    """Fetch JSON from Substack API using curl.
+
+    Substack's Cloudflare blocks GitHub Actions runners, so in CI the request
+    goes through the presentofcoding relay on Vercel (repos/presentofcoding-relay)
+    when SUBSTACK_RELAY_URL and SUBSTACK_RELAY_TOKEN are set. Run locally with
+    neither set, it fetches Substack directly, which works from home.
+    """
+    relay_url = os.environ.get("SUBSTACK_RELAY_URL")
+    relay_token = os.environ.get("SUBSTACK_RELAY_TOKEN")
+    if relay_url and relay_token:
+        cmd = ["curl", "-sS", "-f", "--compressed", "-G", relay_url,
+               "--data-urlencode", f"url={API_URL}",
+               "-H", f"x-relay-token: {relay_token}"]
+    else:
+        cmd = ["curl", "-sS", "-f", "--compressed", API_URL]
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
     if result.returncode != 0:
+        via = "relay" if relay_url and relay_token else "Substack directly"
+        print(f"Fetch via {via} failed: {result.stderr.strip()}")
         return None
     return json.loads(result.stdout)
 
@@ -51,7 +65,7 @@ def main():
     if not raw_posts:
         print("Could not fetch posts (Substack may block datacenter IPs).")
         print("Run this script locally instead.")
-        sys.exit(0)  # exit 0 so CI doesn't report failure
+        sys.exit(1)  # fail loudly so a blocked CI run shows up red, not as a silent stale page
 
     posts = []
     for post in raw_posts:
@@ -68,6 +82,15 @@ def main():
             "category": categorize_post(post["title"]),
         })
         print(f"  {post['title']} ({formatted_date})")
+
+    # Don't rewrite the file (and trigger a deploy) just to bump last_updated.
+    try:
+        with open(OUTPUT_FILE) as f:
+            if json.load(f).get("posts") == posts:
+                print("\nNo new posts; leaving posts.json unchanged.")
+                return
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
 
     with open(OUTPUT_FILE, "w") as f:
         json.dump({

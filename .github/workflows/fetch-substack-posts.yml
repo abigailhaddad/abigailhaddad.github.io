@@ -1,0 +1,53 @@
+name: Fetch Substack Posts
+
+# Refreshes posts.json from Substack. Commits only when the post list changed,
+# so most runs make no commit and trigger no deploy.
+#
+# No [skip ci] in the commit message: it isn't needed (pushes made with
+# GITHUB_TOKEN never trigger workflows, so there is no loop) and it could stop
+# the Pages build. mysite, which serves abigailhaddad.com, runs the same job.
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # daily, 12:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: fetch-substack-posts
+  cancel-in-progress: false
+
+jobs:
+  fetch-posts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Exits non-zero if Substack can't be reached, so a blocked run shows up
+      # as a failed job instead of a silently stale page.
+      # Substack blocks GitHub's runners, so this goes through the relay on
+      # Abigail's personal Vercel account (repos/presentofcoding-relay).
+      - name: Fetch Substack posts
+        env:
+          SUBSTACK_RELAY_URL: ${{ secrets.SUBSTACK_RELAY_URL }}
+          SUBSTACK_RELAY_TOKEN: ${{ secrets.SUBSTACK_RELAY_TOKEN }}
+        run: python fetch_substack_posts.py
+
+      - name: Commit and push if posts changed
+        run: |
+          if git diff --quiet -- posts.json; then
+            echo "posts.json unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts.json
+          git commit -m "Update Substack posts"
+          git push
