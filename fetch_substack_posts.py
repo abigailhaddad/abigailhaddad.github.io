@@ -44,6 +44,9 @@ def fetch_json():
 def main():
     print("Fetching recent Substack posts...")
     raw_posts = fetch_json()
+    # Substack changed this endpoint from a bare list to {"posts": [...], "nextCursor": ...}
+    if isinstance(raw_posts, dict):
+        raw_posts = raw_posts.get("posts")
 
     if not raw_posts:
         print("Could not fetch posts (Substack may block datacenter IPs).")
