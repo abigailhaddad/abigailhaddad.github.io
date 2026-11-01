@@ -35,7 +35,7 @@ def fetch_json():
     """Fetch JSON from Substack API using curl.
 
     Substack's Cloudflare blocks GitHub Actions runners, so in CI the request
-    goes through the presentofcoding relay on Vercel (repos/presentofcoding-relay)
+    goes through the relay on Vercel (relay/ in the mysite repo)
     when SUBSTACK_RELAY_URL and SUBSTACK_RELAY_TOKEN are set. Run locally with
     neither set, it fetches Substack directly, which works from home.
     """

@@ -33,7 +33,7 @@ jobs:
       # Exits non-zero if Substack can't be reached, so a blocked run shows up
       # as a failed job instead of a silently stale page.
       # Substack blocks GitHub's runners, so this goes through the relay on
-      # Abigail's personal Vercel account (repos/presentofcoding-relay).
+      # a Vercel relay (relay/ in the mysite repo).
       - name: Fetch Substack posts
         env:
           SUBSTACK_RELAY_URL: ${{ secrets.SUBSTACK_RELAY_URL }}
