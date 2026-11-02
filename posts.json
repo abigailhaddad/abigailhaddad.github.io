@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "If You Want to Influence Policy, Write A One-Pager",
+      "subtitle": "",
+      "date": "November 2",
+      "url": "https://presentofcoding.substack.com/p/if-you-want-to-influence-policy-write",
+      "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/6e1859a8-9b41-4925-a8d8-52bda907bddc_1672x940.png",
+      "category": "Article"
+    },
+    {
       "title": "The Federal Government Has Hired One Food Inspector This Year",
       "subtitle": "And other things the 2026 totals don\u2019t show",
       "date": "October 28",
@@ -39,16 +47,8 @@
       "url": "https://presentofcoding.substack.com/p/who-gets-to-decide-qualified",
       "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/1bc0f972-1920-481b-929c-2ff924fd3064_1694x928.png",
       "category": "Article"
-    },
-    {
-      "title": "Cash out veterans\u2019 preference in federal hiring, honor their debt",
-      "subtitle": "In government hiring, veterans\u2019 preference is badly structured compensation that also fails on policy grounds",
-      "date": "July 29",
-      "url": "https://presentofcoding.substack.com/p/cash-out-veterans-preference-in-federal",
-      "image_url": "https://substack-post-media.s3.amazonaws.com/public/images/6463c47f-dcb5-4985-8e08-9aa707e37401_1745x901.png",
-      "category": "Government Tech"
     }
   ],
-  "last_updated": "2026-11-01T23:33:53.764874",
+  "last_updated": "2026-11-02T21:33:52.855313",
   "source": "https://presentofcoding.substack.com"
 }
